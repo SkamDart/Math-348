@@ -1,0 +1,80 @@
+\documentclass[12pt]{amsart}	
+\usepackage{amsmath, amsthm, amssymb, amsfonts}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+
+\begin{document} 	
+
+
+\title{MATH 348 Writing Assignment \#1 - Learning to Use LaTeX}
+\author{Cameron Dart}
+\maketitle
+{\bf Theorem.} For all real numbers $x$ and $y$, $|xy|=|x||y|$.
+\\ \\
+{\bf Proof.} To prove this, first suppose that $x \ge 0$ and $y \ge 0$.  
+Then $xy \ge 0$.
+By definition of absolute value, $|xy| = xy$, $|x| = x$ and $|y|=y$. 
+Therefore $|xy| = |x| |y|$.
+
+Next suppose that $x \ge 0$ and $y < 0$.  Then $xy \le 0$.  By definition,
+$|xy| = -(xy)$, $|x| = x$ and $|y| = -y$.  Since $ -(xy) = x(-y)$, we conclude 
+that $|xy| = |x| |y|$.
+
+Next suppose that $x < 0$ and $y \ge 0$. The argument from the previous 
+paragraph, with the roles of $x$ and $y$ reversed, shows that $|xy| = |x| |y|$.
+
+Finally, suppose that $x < 0$ and $y < 0$.  Then $xy >0$.  By definition,
+$|xy| = xy$, $|x| = -x$ and $|y| = -y$.  Since $xy = (-x) (-y)$, we conclude
+that $|xy| = |x| |y|$.
+
+Having considered all possible cases for the signs of $x$ and $y$, we have
+proved that $|xy| = |x| |y|$.
+\\ \\
+
+{\bf Theorem.} For all real numbers $x$, $|x| \geq 0$.
+\\ \\
+{\bf Proof.} Your proof here.
+\\ \\
+\end{document}	
+
+
+% LATEX NOTES
+%
+% 1. A line beginning with % is a ``comment line'' and has no effect on the 
+% printed version of the document.
+%
+% 2. Every document begins with the line  \documentclass[12pt]{article}	 (or something similar).
+%
+% 3. The lines  \setlength{\parindent}{0pt}
+%                setlength{\parskip}{1ex plus 0.5ex minus 0.2ex}
+% are optional.  They cause a new paragraph to be indicated by a blank line rather than by indenting.
+% In my opinion, this makes mathematical writing easier to read.
+% 
+% 4. All of the text of the document must be between the lines  \begin{document}  and \end{document}.
+%
+% 5. The lines \title{Latex Example 1 - Math 248}
+%              \author{Your Name Here}
+%              \maketitle
+% create the heading of the printed document.  The date will be put in automatically.
+%
+% 6. In LaTeX, { } are grouping symbols which do not appear in the printed document.  Use the commands
+% \{ and \} instead if you want these curly brackets to appear in the printed document.
+%
+% 7. {\bf Theorem.} will cause the word ``Theorem.'' to appear in bold face.  The curly brackets { } are
+% needed to tell LaTeX where to begin and end the bold face.
+%
+% 8. The command ``\\ \\"  causes LaTeX to leave an extra blank line.  I've put this before and after the
+% proof to make the document look a little nicer.
+% 
+% 9. All mathematical symbols must go between dollar signs $ $.  The $ will not be printed, but simply
+% indicates where the mathematical symbols begin and end.  This should be used even if a variable x
+% appears alone in a sentence:  put $x$, since this affects the typeface used.
+%
+% 10. The command \ge makes the symbol for ``greater than or equal to''.  The command \le makes the symbol 
+% for ``less than or  equal to.  There are many other such commands - see the handout you got in class.
+%
+% 11. Extra blank spaces have no effect on the printed document, so put in blank spaces as much as you
+% like to make the LaTeX file easier to read.  Same for new lines.  A blank line, however, will cause a new
+% paragraph to be started.
+ 
+

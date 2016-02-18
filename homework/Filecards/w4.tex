@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+%If you want to title your bold things something different just make another thing exactly like this but replace "problem" with the name of the thing you want, like theorem or lemma or whatever
+ 
+\begin{document}
+ 
+%\renewcommand{\qedsymbol}{\filledbox}
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{FileCards Week 4}
+\author{Cameron Dart}
+\maketitle
+ 
+\begin{question}{1}
+What is the decimal expansion of $\frac{3}{7}$?
+\end{question}
+
+\begin{proof}
+$\frac{3}{7} = 0.428571429$
+\end{proof}
+
+\begin{question}{2}
+What is $A*B$ in hexadecimal?
+\end{question}
+ 
+\begin{proof}
+$A_{16} = (10*16^0) =10_{10} \\ 
+ B_{16} = (11*16^0) =11_{10} \\ 
+ (A*B)_{16} = 110_{10} \\ 
+ 110_{10}=96_{10}+14_{10}\\
+ 110_{10}=(6*16^1)+(14*16^0)\\
+ 110_{10}=6E_{16}$
+\end{proof}
+
+\begin{question}{3}
+Write the right-hand sides of the seven definitions above in good English, without symbols.
+\end{question}
+Function f:X→Y iff (∀x∈X)(∃! y∈Y)(y=f(x))\\
+injective: iff (∀a,b∈X)(f(a)=f(b)⇒a=b)\\
+surjective: iff (∀y∈Y)(∃x∈X)(y=f(x))\\
+bijective: iff (∀y∈Y)(∃! x∈X)(y=f(x))\\
+inverse of point: f-1(y)={x∈X∣f(x)=y}\\
+inverse of a subset: f-1(B)={x∈X∣f(x)∈B}\\
+image of a subset: f(A)={y∈Y∣(∃x∈X)(y=f(x))}\\
+
+\begin{proof}
+\textbf{Not positive about these} \\ \\
+\textbf{Function}- For all elements in the domain there does not exist an element in the codomain \\ \\
+\textbf{Injective}- For any two elements in the domain, if the function evaluated at a is equal to the function evaluated at b then those two elements are equal \\ \\
+\textbf{Surjective}- For all outputs there is one input \\ \\
+\textbf{Bijective} - Every element in the codomain is mapped to one element in the domain\\ \\
+\textbf{Inverse of Point} - the inverse function is the set of elements in the domain such that there is a function that maps elements from the domain to codomain  \\  \\
+\textbf{Inverse of Subset} - the inverse of a set is the set containing elements of the domain such that there is a function that maps elements of that function to the inverse set\\ \\
+\textbf{Image of Subset} - The image of a subset is equal to elements of the codomain ST there exists an element in the domain that maps to an element in the codomain \\	\\
+\end{proof}
+
+
+\begin{question}{4}
+For the function just defined, write an explicit formula for $f^{-1}\,(z)\,where\, z\in \Z$
+\end{question}
+ 
+\begin{proof}
+let $f^{-1}\,(z)\,where\, z\in \Z$\\
+Solve $z=f(x) \implies f^{-1}\,(z) = \{ f(odd) = \frac{y-1}{2}, f(even)=\frac{y}{2}\}$
+\end{proof}
+
+\begin{question}{5}
+Show that the even whole numbers are also countably infinite.
+\end{question}
+ 
+\begin{proof}
+\textbf{Countable Set} - A set with the same cardinality as a subset of the $\N$\\
+\textbf{Countably Infinite} - A set is considered to be countably infinite if it has a one-to-one correspondence with the set of $\N$\\
+Let $S=\{2k | k\in \N\}$ and $f(x)=2x$ \\$f$ is a bijection between from $\N$ to $E$ since $f$ is one to one and onto. \\  
+\textbf{Surjective: }let $t \in S$ then $\exists t = 2k $, for some $ t \in \N \land f(k) = t $\\
+\textbf{Injective: }let $f(n)=f(m) \implies 2n=2m \therefore n = m$
+It has been proven that there exists a bijection from $\N$ to $S$. QED. 
+\end{proof}
+
+\begin{question}
+
+\end{question}
+
+
+
+\end{document}

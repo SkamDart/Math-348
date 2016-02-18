@@ -1,0 +1,138 @@
+% --------------------------------------------------------------
+% This is all preamble stuff that you don't have to worry about.
+% Head down to where it says "Start here"
+% --------------------------------------------------------------
+ 
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{corollary}[2][Corollary]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+  
+\title{Homework 3}
+\author{Cameron Dart\\ 
+Math 348} 
+ 
+\maketitle
+ 
+\begin{theorem}{3.16}
+Let $n\in \N. \sum_{i=1}^{n}i^3 = (\frac{n(n+1)}{2})^2$
+\end{theorem}
+\begin{proof}
+Let $P(n)$ be the function that for any $n\in \N, P(n) $ satisfies the conditions in the theorem above \\ \\
+Consider $P(1)$\\ \\
+$1^3 = (\frac{1(1+1)}{2})^2$\\
+$1 = 1$\\ \\
+Assume $P(n)$ holds true for all $n \leq k$ where $k \in \N $\\
+Now consider the case for $P(k+1)$ \\
+\begin{align*}
+\sum_{i=1}^{k+1}i^3 & = \left(\sum_{i=1}^{k}i^3\right)+(k+1)^3\\ 
+& = \left(\frac{k(k+1)}{2}\right)^2+(k+1)^3 & (\text{by inductive hypothesis})\\
+& = \frac{k^2(k+1)^2}{4}+(k+1)^3 \\
+& = \frac{k^4+2k^3+k^2}{4} + k^3+3k^2+3k+1 \\
+& = \frac{k^4+2k^3+k^2}{4} + \frac{4k^3+12k^2+12k+4}{4} \\
+& = \frac{k^4+6k^3+13k^2+12k+4}{4} \\
+& = \frac{(k+1)^2(k+2)^2}{4} \\
+& = \left(\frac{(k+1)(k+2)}{2}\right)^2
+\end{align*}
+Thus it holds for $k+1$ and the inductive hypothesis holds true.\\
+By induction it is true that for all $n \geq 1$. QED
+\end{proof} 
+\begin{theorem}{3.17}
+Let $n\in \N. \sum_{i=1}^{n}i(i+1) = (\frac{n(n+1)(n+2)}{3})$
+\end{theorem}
+\begin{proof}
+Let $n=1$ \\
+1(1+1) = $\left(\frac{(1(1+1)(1+2))}{3}\right)$ \\
+2 = 2\\
+Assume $\forall n \leq k$ the theorem holds true \\
+Now let $n=k+1$
+\begin{align*}
+\sum_{i=1}^{k+1}i(i+1) & = \left(\sum_{i=1}^{k}i(i+1)\right)+(k+1)(k+2) \\
+& = \left(\frac{(k)(k+1)(k+2)}{3}\right) + (k+1)(k+2) & (\text{by our IH})\\
+& = \left(\frac{k^3+6k^2+11k+6}{3}\right)+\left(\frac{3k^2+9k+6}{3}\right)  & (\text{expand})\\
+& = \left(\frac{k^3+9k^2+21k+12}{3}\right) & (\text{combine like terms})\\
+& = \left(\frac{(k+1)(k+2)(k+3)}{3}\right) & (\text{factor})\\
+\end{align*}
+Thus it holds for $k+1$ and the inductive hypothesis holds true.\\
+By induction it is true that for all $n \geq 1$. QED
+\end{proof} 
+%--------------------------------------------------------------------
+\begin{theorem}{3.19}
+$\forall k\in \N$, $x<y \implies x^{2k-1} < y^{2k-1}$\\
+\end{theorem}
+\begin{proof}
+$x<y \implies x^{2-1} < y^{2-1}$\\
+$x<y \implies x<y$\\ \\
+Assume $\forall k \leq n+1$ the inequality holds true\\
+Let $k=n+1$\\
+$x<y \implies x^{2k+1-1} < y^{2k+2-1}$\\
+$x<y \implies x^{2k+1} < y^{2k+1}$\\
+$x<y \implies x*x^{2k} < y*y^{2k}$\\
+By our inductive hypothesis $x^{2k} < y^{2k}$ holds true.
+Since this is true, and $x<y$ is also true, in our conditional it must be true that $x^{2k-1} < y^{2k-1}$\\
+Thus it holds for $k+1$ and the inductive hypothesis is true.\\
+By induction it is true that for all $n \geq 1$. QED
+\end{proof}
+\begin{theorem}{3.28}
+For $n\in \N$ find a prove a formula for $\sum_{i=1}^{n}\frac{1}{i(i+1)}$
+\begin{proof}
+$\sum_{i=1}^{n}\frac{1}{i(i+1)} = \frac{n}{n+1}$\\
+let $i=1$\\
+$\sum_{i=1}^{1}\frac{1}{i(i+1)} = \frac{i}{i+1}$\\
+$\frac{1}{2} = \frac{1}{2}$\\ \\
+Now assume it holds true for all $i \leq k$\\
+Let $i=k+1$
+\begin{align*}
+\sum_{i=1}^{k+1}\frac{1}{i(i+1)} & = \left(\sum_{i=1}^{k}\frac{1}{i(i+1)}\right)+\frac{k+1}{(k+1)(k+2)} \\
+& = \frac{k}{k+1}+\frac{1}{(k+1)(k+2)} & (\text{by IH})\\
+& = \frac{(k)(k+2)}{(k+1)(k+2)}+\frac{1}{(k+1)(k+2)}\\
+& = \frac{k^2+2k+1}{(k+2)(k+1)}\\
+& = \frac{(k+1)^2}{(k+2)(k+1)}\\
+& = \frac{(k+1)}{(k+2)}
+\end{align*}
+let $p=k+1$
+\begin{align*}
+= \frac{p}{p+1}	
+\end{align*}
+Thus it holds for $k+1$ and the inductive hypothesis holds true.\\
+By induction it is true that for all $n \geq 1$. QED
+\end{proof}
+\end{theorem}
+\begin{theorem}{3.29}
+For $n\in \N$ find a prove a formula for $\sum_{i=1}^{n}(2i-1)$
+\end{theorem}
+\begin{proof}
+$\sum_{i=1}^{n}(2i-1) = n^2$\\
+Let $n = 1$\\
+$2n-1 = n^2$\\
+$2(1)-1 = 1^2$\\
+$1 = 1$\\ \\
+Assume this holds true $\forall n \geq k$
+Consider the case where $n = k+1$
+\begin{align*}
+\sum_{i=1}^{k+1}(2i-1) &= \left(\sum_{i=1}^{k}(2i-1)\right) + (2(k+1)-1)\\
+& = (k^2)+(2k+1) & (\text{by our inductive hypothesis})
+\end{align*}
+By our inductive hypothesis, the $k+1^{th}$ term is equivalent to the sum of the first $k$ terms in the series, plus the $k+1$ term\\
+Thus it holds for $k+1$ and the inductive hypothesis holds true.\\
+By induction it is true that for all $n \geq 1$. QED
+\end{proof}
+\end{document}

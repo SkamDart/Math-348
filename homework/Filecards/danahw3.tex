@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\boner}{\delta_{M}^{*}}
+ 
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+ 
+\begin{document}
+\title{HW 3}
+\author{Dana Nikolaeva Chambourova}
+\maketitle
+ 
+\begin{problem}{1}
+homomorphism $h:\epsilon \implies \Delta^*$\\
+%% format the piece wise function
+if $h(w) = \{ \epsilon$ \text{, if} $ w = \epsilon $\\
+$ h(a)h(\mu) $ \text{, if } $w=an$ \text{ where } $a \in \Sigma $ \text{ , } $\mu \in \Sigma^* \}$\\
+$h^*(L) = \{ h(w) | w \in L \}$ \text{ where } $L \subseteq \Sigma^*$\\
+$h^{-1} = \{ h(w) | h(w) \in L \}$ \\ \\ 
+$\Sigma =  \{ a,b \}$\text{,  } $h(a) = 01$\\ 
+$\Delta = \{0,1\}$\text{,  } $h(b) = 10$\\ \\
+% format part a and part b
+\textbf{a)}\\
+$h^{-1}( \{0101\} )= (ab)$\\
+$h^{-1}( \{00\} )= \emptyset$\\
+$h^{-1}( \{001\} )= \emptyset$\\
+$h^{-1}( \{1001\} )= (ba)$ \\ \\
+\textbf{b)}\\
+$L = L((00 + 1)^*)$\\
+$h^{-1}(L) = (ba)^*$\\
+$h(h^{-1}(L))=h((ba)^*) = (1001)^*$
+\end{problem}
+
+\begin{problem}{2}\text{Regular language are closed under inverse homomorphic images}\\
+if $h:\Sigma \implies \Delta^*$ and $L \subseteq \Delta^*$ is regular than $h^{-1} $ is regular\\ 
+\textbf{a)}
+$w \in \Sigma^*$ , $ d_{n}^*(s^{'}w) = \delta_{M}^{*}(s, h(w)) $\\ 
+\\ \textbf{b)} Prove the correctness statement by induction on the length w	\\
+\begin{proof}
+We will do induction on $|w|$\\ 
+\underline{Base Case}: \\
+When $|w|$, $ w=\epsilon $\\
+$\boner(s^{'},w) = \boner(\delta, h(w))$\\
+$\boner(s^{'},w) = \boner(\delta, h(\epsilon)) $\\ \linebreak
+Since $s'^{*} = s$\\
+$\boner (s,\epsilon)= \boner(s,h(\epsilon)) $\\ \linebreak
+By definition of a homomorphism\\ 
+$h(\epsilon) = \epsilon$\\
+$\boner(s,\epsilon) = \boner(s,\epsilon)$ \\ \\
+\underline{Inductive Hypothesis}: $\forall w $ \text{where} $ |w| < n$ , $\boner(s,w) = \boner(s',h(w))$ 
+\\ \underline{Induction Step}:\\
+Let w be a string such that $|w|=\mu$\\
+And as we know $s=s'$ then \\
+$\boner(s,w) = \boner(s,h(w))=$\\
+Let $w=an$, $a \in \Sigma $, $\mu \in \Sigma^*$\\
+$\boner(s,a*m) = \boner(s, h(a)*h(\mu))$\\
+$\boner(\delta(s,a),\mu) = \boner(\boner(s,h(a), h(\mu))$\\
+$\boner(\delta(s,a),\mu) = \boner(\boner(s,a),\mu)$
+
+\end{proof}
+\end{problem}
+\end{document}

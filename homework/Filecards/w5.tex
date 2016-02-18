@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+ \usepackage[margin=1in]{geometry} 
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
+ 
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+%If you want to title your bold things something different just make another thing exactly like this but replace "problem" with the name of the thing you want, like theorem or lemma or whatever
+ 
+\begin{document}
+ 
+%Good resources for looking up how to do stuff:
+%Binary operators: http://www.access2science.com/latex/Binary.html
+%General help: http://en.wikibooks.org/wiki/LaTeX/Mathematics
+%Or just google stuff
+ 
+\title{FileCard Week 5}
+\author{Cameron Dart}
+\maketitle
+ 
+\begin{question}{1}
+What is a solution to $42=17x+5y$ ?
+\end{question}
+
+\begin{proof}
+$42=17x+5y$\\
+$5y=42-17x$\\
+$y=\frac{42-17x}{5}$\\
+\text{let }$x=0$\\
+$y=42$\\
+\end{proof}
+
+\begin{question}{2}
+What are all solutions to $34x+10y=6$?	
+\end{question}
+
+\begin{proof}
+$34x+10y=6$\\
+\begin{align}
+gcd(34,10) &= gcd(4,10) \\
+& = gcd(4,2) \\
+& = gcd(0,2) \\ 
+& = 2\\
+\end{align}
+let $S = \{ x,y \text{ are solutions } | (x+kv, y-ku) \}$
+\end{proof}
+
+
+
+\end{document}
