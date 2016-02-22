@@ -1,0 +1,40 @@
+  
+\documentclass{achemso}
+\usepackage{amssymb}
+\newenvironment{definition}[1][Formal Definition]{\begin{trivlist}\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+\newenvironment{indef}[1][Informal Definition]{\begin{trivlist}\item[\hskip \labelsep {\bfseries #1}]}{\end{trivlist}}
+
+\author{Cameron P. Dart}
+\email{cdart2@illinois.edu}
+\affiliation{Math 348 - Fundamental Mathematics - University of Illinois at Urbana-Champaign}
+\affiliation{Department of Mathematics}
+\title{Analysis of Machine Learning Algorithms}
+
+\begin{document}
+\begin{abstract}With a rapid increase in the amount of data that is being collected there is a greater need to process the collected data. Currently one of the most popular ways is through a subset of computer science called 
+\textbf{Machine Learning}. In general, machine learning algorithms are written to teach computers how to recognize patterns and classify unknown data based on those patterns. One of the most effective ways to measure the efficient of these algorithms is through space and time complexity. 
+\end{abstract}
+\section{Introduction}In this paper, I will explain the mathematical differences between $\mathcal{O}(n)$,$\Theta(n)$, and $\Omega(n)$, share their relation to space-time complexity algorithm analysis, and compare supervised, unsupervised, and semi-supervised machine learning algorithms I have written to open source implementations.
+\section{Definitions}
+% big O
+\subsection{$\mathcal{O}(n)$:} 
+\begin{definition} Let $C$ and $k$ be constants such that $C , k \in \mathbb{Z}^+$ \\
+$f(n)$ is $ \mathcal{O}(g(n)) \equiv \; \exists C \; \exists k \; \forall n \;(n > k \rightarrow f(n) \leq Cg(n))$
+\end{definition}
+\begin{indef} 
+\end{indef}
+
+% big omega
+\subsection{$\Omega(n)$:}
+\begin{definition}
+\end{definition}
+\begin{indef}	
+\end{indef}
+
+% big theta\
+\section{Algorithm Analysis}
+\subsection{Supervised Learning: Linear Regression}
+\textbf{Goal: }Predict a target value $y$ from a given vector $v$ of input values $x \in \mathbb{R}^n \wedge x \in v$ 
+Find a function $y = h(x)$ such that $y^{(i)} \approx h(x^{(i)})$ for each given training example.\\ If we have enough examples then $h(x)$ should be a good approximation for any $m$ where $m \in \mathbb{R}^n$.\\
+\textbf{Mathematical Reasoning: } We need to decided how to represent the function $h(x)$.\\ To begin let's use a space of linear functions called our \textbf{hypothesis class} denoted by $h_\theta(x)$ and define that   $h_\theta(x) = \sum_j \theta_j x_j = \theta^\top x$. In this case $h_\theta(x)$ represents a space of functions known as our \textbf{hypothesis class} that are parameterized by $\theta$. We must find a $\theta$ such that $h_\theta($
+\end{document}     
