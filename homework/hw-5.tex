@@ -1,0 +1,171 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,amsthm,amssymb}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+ 
+\newenvironment{theorem}[2][Theorem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{exercise}[2][Exercise]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{problem}[2][Problem]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\newenvironment{question}[2][Question]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
+\def\imp{\rightarrow}
+\newenvironment{level}%
+{\addtolength{\itemindent}{2em}}%
+{\addtolength{\itemindent}{-2em}}
+
+ 
+\begin{document}
+  
+\title{Homework 5}
+\author{Cameron Dart\\ 
+Math 348} 
+ 
+\maketitle
+
+\begin{question}{6.8}
+Compute gcd of (126,224) and (221,299).\\
+\begin{align}
+gcd(126,224) &= gcd(126,98)\\ 
+&= gcd(28,98) \\
+&= gcd(28,14) \\
+&= 14 \\
+\\ 
+(126)(4) + (224)(-7) &= 14\\
+896 - 882 &= 14\\
+14 &= 14
+\end{align}
+\begin{align}
+gcd(221,299) &= gcd(221,78)\\ 
+&= gcd(65,78) \\
+&= gcd(65,13) \\
+&= 13 \\
+\\ 
+(221)(-4)+(299)(3)&= 13\\
+-884+897 &=13\\
+13 &= 13\\
+\end{align}
+\end{question}
+%
+\begin{question}{6.9}
+Find all solutions for the diophantine equations.\\
+%
+\textbf{a)}$17x+13y=200$
+\begin{enumerate}
+	\item gcd$(17,13) = 1 $, $ 1 | 200 \therefore$ a solution exists.
+	\item $17x+13y=1$
+	\begin{level}
+		\item let $x=-3,y=4$
+		\item $17(-3)+13(4)=1$ 
+		\item $1=1$
+	\end{level}
+	\item soln: (x,y) = $200*(-3,4)$
+	\begin{level}
+		\item soln: (x,y) = $(-600,800)$
+	\end{level}
+	\item let S be the set of solutions to the diophantine equation.
+	\item $S = \{(-600+15k, 800+17k )$, $k \in \Z \}$
+\end{enumerate}
+%
+\textbf{b)}$21x+15y=93$
+\begin{enumerate}
+	\item $\gcd(21,15) = 3\, , \, 3 | 93 \therefore $ a solution exists.
+	\item $\frac{21x+15y=93}{3}$
+	\item $7x+5y=31$
+	\begin{level} 
+		\item $7x+5y=1$
+		\item let $x=3,y=-4$
+		\item soln: (x,y)$=31*(3,-4)$
+		\item soln: (x,y)$=(93,-124)$
+	\end{level}
+	\item let S be the set of solutions to the diophantine equation.
+	\item $S = \{(93+5k, -124-7k) $, $k \in \Z \}$ 
+\end{enumerate}
+
+\textbf{c)}$60x+42y=104$
+\begin{enumerate}
+	\item $\gcd(60,42)=6$,$6 \not | 104 \therefore $ no integer solution exists.
+\end{enumerate}
+
+\textbf{d)}$588x+231y=63$\\
+\begin{enumerate}
+	\item $\gcd(588,231)=21$ , $21 | 63 \therefore$ a solution exists
+	\item $\frac{588x+231y=63}{21}$
+	\item $28x+11y=3$
+	\item $28x+11y=1$
+	\item let $x=2,y=-5$
+	\item soln (x,y)=$3*(2,-5)$
+	\item soln (x,y)=$(6,-15)$
+	\item let S be set of solutions to the diophantine equation.
+	\item $S = \{(6+11k, -15-28k)$, $k \in \Z \}$
+\end{enumerate}
+\end{question}
+%%%
+\begin{question}{6.17}
+\begin{proof}
+$\gcd(a+b,a-b)=\gcd(2a,a-b)=\gcd(a+b,2b)$	
+\end{proof}
+\end{question}
+%%
+\begin{question}{6.18} Suppose $\gcd(a,b)=1$.
+\begin{proof}
+$\gcd(a^2,b^2)=1$
+	\begin{enumerate}
+		\item $gcd(a,b)=1 \, \implies \, (\exists x,y \in \,\Z) \, (ax+by=1)$ \hfill(Integer Combination)
+		\item $(ax+by)^3=1^3$ \hfill(Cube both sides)
+		\item $a^3x^3+3a^2x^2by+3axb^2y^2+b^3y^3=1$ \hfill(Expand)
+		\item $a^2(x^3+3x^2by)+b^2(3axy+by^3)$ \hfill(Factor)
+		\item Let $m=(x^3+3x^2by),\, n=(3axy+by^3)$ \hfill(Declare Vars)
+		\item $a^2m+b^2n=1$ \hfill(Substitute back in) 
+		\item $gcd(a^2,b^2) = 1$ \hfill(Definition of GCD)
+	\end{enumerate}
+\end{proof}
+%%
+\begin{proof}
+$\gcd(a,2b)\neq 1$\\
+I will prove that $gcd(a,b)=1 \nRightarrow \, \gcd(a,2b)=1$ using contradiction. \\First, assume $(\forall a,b \in \Z \neq 0)(gcd(a,b)=1 \wedge gcd(a,2b)=1)$. In other words that both $(a,b) \wedge (a,2b)$ respectively are relatively prime. \\So $gcd(a,b)=1 \Rightarrow \, \gcd(a,2b)=1$ 
+\begin{enumerate}
+	\item $\gcd(a,b)=1$ \hfill(Given)
+	\item Assume $gcd(a,2b)=1$ \hfill(Assumption)
+	\item Let $a=2, b=5$ \hfill(Specify Individual Case)
+	\item $\gcd(2,5) = 1 \, \therefore \, a,b$ are relatively prime. \hfill(Compute gcd)
+	\item Now let's consider $\gcd(a,2b)=1$ \hfill(Assumption)
+	\item $\gcd(2,2*5)=1$ \hfill(Multiplication)
+	\item $\gcd(2,10)=2\neq 1$ \hfill(Compute gcd)
+\end{enumerate}
+This contradicts our original assumption $(\forall a,b \in \Z \neq 0)(gcd(a,b)=1 \wedge gcd(a,2b)=1)$\\
+Hence it must be true that $\gcd(a,b) \nRightarrow gcd(a,2b)=1$\\
+\end{proof}
+\end{question}
+%%
+\begin{question}{6.28} Suppose that $\gcd(a,b)=1\, , \, a|n\, ,\, b|n$.
+\end{question}\leavevmode
+\begin{proof}$ab\,|\,n$
+    \begin{enumerate}
+    \item $a|n\, ,\, b|n$ \hfill(Given)
+    \begin{level}
+    	\item $(\exists m,n) (c=am,\, c=bn)$ \hfill(Definition of divides)
+	\end{level}    
+    \item $\gcd(a,b)=1 \therefore \, a,b$ are \textit{relatively prime} \hfill(Given)
+    \begin{level}
+    	\item $\exists s,t \in \Z$ such that,  $as+bt=1$ \hfill(Integer Combination of $a,b$)
+    	\item $c(as+bt)=c$ \hfill(Multiply both sides by $c$)
+    	\item $cas+cbt=c$ \hfill(Distributive Property of Multiplication)
+    	\item $(bn)as+(am)bt=c$ \hfill(Substitutions from 2)
+    	\item $ab(ns+mt)=c$ \hfill(Factor out $ab$)
+    \end{level} 
+    \item Let $u=ns \, , \, v = mt, \, z = (u+v)$ \hfill(Reassign Variables)
+	\begin{level}
+		\item $ab(u+v) = c$  \hfill(Rewrite $u=ns,v=mt$)
+		\item $abz = c$ \hfill(Rewrite $z =(u+v)$)
+		\item $ab|c$ \hfill(Definition of Divides)
+ 	\end{level}  
+	\end{enumerate}
+As shown through a direct proof, if $ \gcd(a,b)=1 \wedge \, a|n \,\land\, b|n \implies ab|n$
+\end{proof}
+
+\end{document}
