@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.28)  25 FEB 2016 22:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.28)  1 MAR 2016 19:53
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -130,7 +130,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 94--95
 
  []
 
-[2] [3] [4] [5] (/Users/camerondart/spring-2016/math-348/homework/.texpadtmp/hw-5.aux) ) 
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 110--118
+
+ []
+
+[3] [4] [5] [6] (/Users/camerondart/spring-2016/math-348/homework/.texpadtmp/hw-5.aux) ) 
 Here is how much of TeX's memory you used:
  1215 strings out of 493054
  14030 string characters out of 6134760
@@ -138,12 +143,12 @@ Here is how much of TeX's memory you used:
  4772 multiletter control sequences out of 15000+600000
  11837 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,8n,26p,307b,278s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 27i,8n,26p,307b,304s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/camerondart/spring-2016/math-348/homework/.texpadtmp/hw-5.pdf (5 pages, 102094 bytes).
+Output written on /Users/camerondart/spring-2016/math-348/homework/.texpadtmp/hw-5.pdf (6 pages, 105486 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
- 42 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

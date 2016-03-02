@@ -105,9 +105,45 @@ Find all solutions for the diophantine equations.\\
 \end{enumerate}
 \end{question}
 %%%
-\begin{question}{6.17}
-\begin{proof}
-$\gcd(a+b,a-b)=\gcd(2a,a-b)=\gcd(a+b,2b)$	
+\begin{question}{6.17}Prove $\gcd(a+b,a-b)=\gcd(2a,a-b)=\gcd(a+b,2b)$\leavevmode
+\begin{lemma}{A}
+	Assume $p,q,r$ are all integers such that $p,q,r \neq 0$\\
+	Let $p|q$ and $p|r$ evenly\\
+	$p|q \, \wedge \, p|r \, \implies p|q+r$\\
+	Since $p|q \implies (\exists k_1)(q=pk_1)$\\
+	$p|r \implies (\exists k_2)(r=pk_2)$\\
+	$\therefore q+r = p(k_1+k_2)$\\
+	$q+r=p(k_3)$ for some integer $k_3=k_1+k_2$\\
+	By definition of divisibility $p|q+r$\\
+\end{lemma}
+\begin{lemma}{B}
+	Let $a,b,c$ be integers such that $a,b,c \neq 0$\\
+	$a|b \implies a|bc$\\
+	$b=ar$ where $r \in \mathbb{Z}$\\
+	$bc=arc=(ar)c$\\
+	Since $rc$ is an integer $a|bc$
+\end{lemma}
+\begin{proof}\leavevmode
+\begin{enumerate}
+	\item Let $d_1|(a+b)\,$ and $d_1|(a-b)$
+	\begin{level}
+		\item $(d_1 | (a+b)+(a-b))$
+		\item $(d_1 | 2a )$ \hfill(By lemma A)
+		\item $(d_1 | a-b )$ \hfill(By our original assumption)
+		\item $(d_1 | b)$ \hfill(By lemma A)
+		\item $(d_1 | 2b)$ \hfill(By lemma A and B)
+	\end{level}
+	\item Let $\gcd(2a,a-b)=d_2$
+	\begin{level}
+		\item $d_2 | 2a$
+		\item $d_2 | a-b$
+		\item Thus $d_1 = d_2$ since $d_1 , d_2$ both divide $2a \wedge a-b $
+	\end{level}
+	\item Let $d_3 | a+b,2b$
+	\item Hence $d_1 = d_3$ since both $d_1 \wedge d_3$ divide $a+b \wedge 2b$ 
+	\item Lastly, $d_1 = d_2 \wedge d_1 = d_3 \implies d_2 = d_3$
+	\item Thus, $gcd(a+b,a-b)=\gcd(2a,a-b)=\gcd(a+b,2b)$
+\end{enumerate}
 \end{proof}
 \end{question}
 %%
