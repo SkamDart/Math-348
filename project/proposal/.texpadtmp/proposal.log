@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.28)  22 FEB 2016 00:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.28)  6 MAR 2016 21:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -94,35 +94,40 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
  [1
 
-{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Underfull \hbox (badness 10000) in paragraph at lines 69--82
+{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Overfull \hbox (1.57495pt too wide) in paragraph at lines 52--54
+[]\OT1/cmr/m/n/10 the func-tion $\OML/cmm/m/it/10 f$ \OT1/cmr/m/n/10 is con-sid-ered to be $^^B(\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 ))  \OMS/cmsy/m/n/10 ([])  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 c[]g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 n\OT1/cmr/m/n/10 )) \OMS/cmsy/m/n/10 ^^T
+ []
 
+[2]
+Overfull \hbox (31.34424pt too wide) in paragraph at lines 101--109
+\OT1/cmr/m/n/10 A doc-tor is given You are given a vec-tor $\OML/cmm/m/it/10 V$ \OT1/cmr/m/n/10 of in-puts such that $\OML/cmm/m/it/10 V \OT1/cmr/m/n/10 = []$
  []
 
 
-Overfull \hbox (28.72289pt too wide) in paragraph at lines 92--93
+Overfull \hbox (28.72289pt too wide) in paragraph at lines 111--112
 []\OT1/cmr/m/n/10 https://www.cs.auckland.ac.nz/courses/compsci220s1t/lectures/lecturenotes/GG-
  []
 
 
-Overfull \hbox (14.02852pt too wide) in paragraph at lines 94--95
+Overfull \hbox (14.02852pt too wide) in paragraph at lines 113--114
 []\OT1/cmr/m/n/10 http://www2.isye.gatech.edu/ sman/courses/6739/SimpleLinearRegression.pdf 
  []
 
-[3] (/Users/camerondart/spring-2016/math-348/project/proposal/.texpadtmp/proposal.aux) ) 
+[3] [4] (/Users/camerondart/spring-2016/math-348/project/proposal/.texpadtmp/proposal.aux) ) 
 Here is how much of TeX's memory you used:
- 860 strings out of 493054
- 10049 string characters out of 6134760
+ 862 strings out of 493054
+ 10068 string characters out of 6134760
  68371 words of memory out of 5000000
- 4432 multiletter control sequences out of 15000+600000
- 10814 words of font info for 39 fonts, out of 8000000 for 9000
+ 4433 multiletter control sequences out of 15000+600000
+ 11159 words of font info for 40 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 27i,6n,20p,1269b,189s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on /Users/camerondart/spring-2016/math-348/project/proposal/.texpadtmp/proposal.pdf (3 pages, 187764 bytes).
+ 27i,9n,20p,1004b,203s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on /Users/camerondart/spring-2016/math-348/project/proposal/.texpadtmp/proposal.pdf (4 pages, 190500 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
- 59 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

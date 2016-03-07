@@ -1,0 +1,58 @@
+\documentclass[11pt,a4paper]{book} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fourier}
+
+
+\usepackage{amsmath}
+\usepackage[thmmarks,  thref, amsmath]{ntheorem}
+
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+
+\theoremheaderfont{\itshape}
+\theorembodyfont{\upshape}
+\newtheorem{case}{Case}
+
+\theoremstyle{nonumberplain}
+\theoremheaderfont{\scshape}
+\theorembodyfont{\upshape}
+\theoremsymbol{\scshape Q. E. D.}
+\theorempostwork{\setcounter{case}{0}}
+\newtheorem{proof}{Proof}
+
+\begin{document}
+
+\begin{thm}
+If $x,y,m \in \mathbb{Z}$ then $gcd(x,y) = gcd(x,y-mx)$
+\end{thm}
+\begin{proof}
+Given $m \in \mathbb{Z}$\\ 
+It must be true that\\
+$(y-mx) = (y\mod x)$\\
+Thus we are really trying to prove.. \\
+\begin{align*}
+gcd(x,y) &= gcd(x,y-mx)\\
+&= gcd(x,y mod x)\\ 
+\end{align*}
+
+That being true, there are two cases that must be considered for this proof.
+\begin{case}
+where $x=y=0$\\
+\begin{align*}
+gcd(0,0) &= gcd(0,0-0)\\
+&= gcd(0,0)
+\end{align*}
+\end{case}
+
+
+\begin{case}
+Assume at least one of $x,y$ is non zero\\
+Suppose $d|x$ and $d|y$\\
+We now must prove that $d|y-mx$\\
+Since $(d|x \wedge y)(\exists k_0,k_1)$ such that $(x = d*k_0)(y = d*k_1)$ given $(k_0,k_1 \in Z)$
+\begin{align*} 
+\end{align*}
+\end{case}
+\end{proof}
+\end{document} 
