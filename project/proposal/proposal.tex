@@ -16,8 +16,9 @@ In order to gain a deeper understanding of artificial intelligence algorithms, I
 
 % Intro
 \section{Introduction}
-In this paper, I will strictly define machine learning and give mathematical descriptions and intuition on one \textit{supervised} and one \textit{unsupervised} learning algorithm. Additionally, I will provide an explanation of the differences between $\mathcal{O}(n)$,$\Theta(n)$, and $\Omega(n)$ in regards run time and space complexity. Lastly, I will combine the mathematical descriptions of algorithms and space/time complexity to analyze the differences between my own and open source implementations of the same algorithms.Machine Learning algorithms are repetitive in their computations so before writing any code, it would be most useful to write the algorithm by hand with a small sample set. This will be beneficial to understanding where inefficiencies in code could occur, or what mathematical concepts I can exploit using the computational power of a computer. Once I have the code written, analysis, I will move forward to writing my own algorithm in Python.   
-
+In this paper, I will strictly define a subset of artificial intelligence called \textit{machine learning}. I will provide mathematical descriptions and intuition on one \textit{supervised} and one \textit{unsupervised} learning algorithms which both exist inside of machine learning. Before diving into the mathematical analysis of both types of learning, I will define the different types of learning between \textit{supervised}, \textit{unsupervised}, and \textit{semi-supervised} algorithms. The \textit{supervised} learning algorithm I will explore is a \textit{linear regression} and after I will delve into the \textit{unsupervised} learning algorithm called \textit{k nearest neighbor clustering}.\\
+ Additionally, I will define $\mathcal{O}(n)$,$\Theta(n)$, and $\Omega(n)$ which are common notations in the analysis of functions, and explain their relationship to the run time and space complexity of algorithms. Lastly, I will combine the mathematical descriptions of algorithms and space/time complexity to analyze the differences between my own and open source implementations of the same algorithms. \\
+ Machine Learning algorithms are repetitive in their computations, hence before writing any code it would be most useful to compute the algorithm by hand with a smaller \textit{training set}f. Doing this will allow me to understand where inefficiencies in code and computation can occur, or what mathematical concepts and definitions I can apply to my code. Once I have my mathematical descriptions written, I will proceed to writing my own code, and lastly I will analyze and compare. 
 \section{Method of Analysis}
 In order to get a better understanding of the algorithms used, I will use Python modules such as \textit{memory} and \textit{os} \cite{WikiPython} to gather data on  programs, functions, and processes run time and memory usage. The module \textit{memory} will be used as a way to keep track of how much memory a Python process is consuming. While \textit{os} will be used to test the runtime a certain function. 
 I will provide line by line theoretical analysis with run times of functions and operations provided by Python documentation so I can further see the short comings and advantages of each implementation. Additionally, I will prove which runs more quickly and uses less space through test cases. I will run test cases with controlled input size and examine the results to confirm my hypothesizes. With all of the theoretical and experimental data at my hand, I will be able to decide which implementation the most efficient.  
@@ -77,7 +78,9 @@ $\hat \beta_0$ is defined as
 \begin{equation}
 	\hat \beta_0 = \bar y - \hat \beta_1 \bar x
 \end{equation}
-Given $n$ is the number of data points in the \textit{training set}
+Given $n$ is the number of data points in the \textit{training set}\\
+Let \\$\bar y \equiv \frac{1}{n} \sum y_i$ \\
+ $\bar x \equiv \frac{1}{n}\sum x_i$
 \begin{equation}
 	\hat \beta_1 = \left(\frac{n \sum x_iy_i - (\sum x_i)(\sum y_i)}{n\sum x_i^2 - (\sum x_i)^2}\right)
 \end{equation}
@@ -88,19 +91,59 @@ An easier way to express $\hat \beta_1$ can be defined as
 Where $S_{xy}$ and $S_{xx}$ are 
 \begin{align*}
 S_{xy}&= \sum(x_i-\bar x)(y_i-\bar y) \\
-	  &= \sum x_iy_i-\frac{(\sum x_i)(\sum y_i)}{n}
+	  &= \sum x_iy_i-\frac{(\sum x_i)(\sum y_i)}{n}\\
+	  &= \sum x_iy_i-\bar x *\bar y
 \end{align*}
 
 \begin{align*}
 S_{xx} &= \sum(x_i - \bar x)^2 \\
-	 &= \sum (x_i)^2 - \frac{(\sum x_i)^2}{n}
+&= \sum (x_i)^2 - \frac{(\sum x_i)^2}{n}\\
+&= \sum (x_i)^2 - \bar x
 \end{align*}
-Given $\bar y \equiv \frac{1}{n} \sum y_i$ and $\bar x \equiv \frac{1}{n}\sum x_i$
 
-\subsubsection{Example Use Cases}
-A doctor is given  
-You are given a vector $V$  of inputs such that $V = \left \{(x_1,y_1), ... ,(x_n,y_n) \right \}$ where $x_i$ is the height and $y_i$ is an weight for the $i^{it}$ individual. \\
-You want to predict the weight of an individual
+\subsubsection{Example Use Case}
+You are given a vector of training data, $V$, such thatd $V = \left \{(x_1,y_1), ... ,(x_n,y_n) \right \}$ where $x_i$ is the hours an individual studied for a test in inches and $y_i$ is their score on that test. \\
+Let $V$ be defined as the vector given below.
+\begin{center}
+    \begin{tabular}{ | l | l |} \hline
+	    X: Time Studied (Hours) & Y: Score (Out of 800)  \\ \hline
+		    4 & 390 \\ \hline
+			9 & 580 \\ \hline
+			10 & 650 \\ \hline
+			14 & 730 \\ \hline
+			4 & 410 \\ \hline
+			7 & 530 \\ \hline
+			12 & 600 \\ \hline
+			22 & 790 \\ \hline
+			1 & 350 \\ \hline
+			3 & 400 \\ \hline
+			8 & 590 \\ \hline
+			11 & 640 \\ \hline
+			5 & 450 \\ \hline
+			6 & 520 \\ \hline
+			10 & 690 \\ \hline
+			11 & 690 \\ \hline
+			16 & 770 \\ \hline
+			13 & 700 \\ \hline
+			13 & 730 \\ \hline
+			10 & 64 \\ \hline
+    \end{tabular}
+\end{center}
+
+\subsubsection{Calculations}
+First I will calculate $\bar x$ and $\bar y$, better known as the average values for $x$ and $y$ respectively\\
+\begin{align*}
+\bar x &= \frac{1}{n} * \sum_{i=0}^{n}x_i\\
+&= \frac{1}{20} * \sum_{i=0}^{20}x_i\\
+&= \frac{1}{20} * 189\\
+&= 9.45\\ \\
+\bar y &= \frac{1}{n} * \sum_{i=0}^{n}y_i\\
+&= \frac{1}{20} * \sum_{i=0}^{20}y_i\\
+&= \frac{1}{20} * 11274\\
+&= 563.7\\
+\end{align*}
+Thus, based on our training set defined above $\bar x = 9.45$ and $\bar y = 563.7$\\
+Next, I will use the previous calculations of $\bar x$ and $\bar y$ to calculate $S_{xy}$ and $S_{xx}$
 %\section{Unsupervised Learning Algorithms}
 %\subsection{Definition}
 %\subsection{Example K-Means Clustering}

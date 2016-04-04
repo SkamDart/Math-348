@@ -9,11 +9,11 @@
 
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}
-
+\newenvironment{lemma}[2][Lemma]{\begin{trivlist}
+\item[\hskip \labelsep {\bfseries #1}\hskip \labelsep {\bfseries #2.}]}{\end{trivlist}}
 \theoremheaderfont{\itshape}
 \theorembodyfont{\upshape}
 \newtheorem{case}{Case}
-
 \theoremstyle{nonumberplain}
 \theoremheaderfont{\scshape}
 \theorembodyfont{\upshape}
@@ -26,33 +26,42 @@
 \begin{thm}
 If $x,y,m \in \mathbb{Z}$ then $gcd(x,y) = gcd(x,y-mx)$
 \end{thm}
+\begin{lemma}{A}$p|q \, \wedge \, p|r \, \implies p|q+r$\\
+	Assume $p,q,r$ are all integers such that $p,q,r \neq 0$\\
+	Let $p|q$ and $p|r$ evenly\\
+	Since $p|q \implies (\exists k_1)(q=pk_1)$\\
+	$p|r \implies (\exists k_2)(r=pk_2)$\\
+	$ q+r = p(k_1+k_2)$\\
+	$q+r=p(k_3)$ for some integer $k_3=k_1+k_2$\\
+	By definition of divisibility $p|q+r$\\
+\end{lemma}
+\begin{lemma}{B}
+	Let $a,b,c$ be integers such that $a,b,c \neq 0$\\
+	$a|b \implies a|bc$\\
+	$b=ar$ where $r \in \mathbb{Z}$\\
+	$bc=arc=(ar)c$\\
+	Since $rc$ is an integer $a|bc$
+\end{lemma}
 \begin{proof}
-Given $m \in \mathbb{Z}$\\ 
-It must be true that\\
-$(y-mx) = (y\mod x)$\\
-Thus we are really trying to prove.. \\
-\begin{align*}
-gcd(x,y) &= gcd(x,y-mx)\\
-&= gcd(x,y mod x)\\ 
-\end{align*}
-
-That being true, there are two cases that must be considered for this proof.
+There are two cases that must be considered for this proof.
 \begin{case}
 where $x=y=0$\\
+Let $d_0 | x \wedge y$ 
 \begin{align*}
 gcd(0,0) &= gcd(0,0-0)\\
 &= gcd(0,0)
 \end{align*}
+Hence, it must be true for this case.
 \end{case}
-
-
+%%%%%%%%%%%%%%
 \begin{case}
 Assume at least one of $x,y$ is non zero\\
-Suppose $d|x$ and $d|y$\\
-We now must prove that $d|y-mx$\\
-Since $(d|x \wedge y)(\exists k_0,k_1)$ such that $(x = d*k_0)(y = d*k_1)$ given $(k_0,k_1 \in Z)$
-\begin{align*} 
-\end{align*}
+Suppose $d_1|x$ and $d_1|y$\\
+Let $n = -mx$\\
+By Lemma B it is true that $d_1|n$\\
+Since $d_1|x \wedge d_1|n$ by Lemma A it must be true that $d|y+n$\\
+Hence $d_1 | y+n$\\
+$d_1|y-mx$ 
 \end{case}
 \end{proof}
 \end{document} 
