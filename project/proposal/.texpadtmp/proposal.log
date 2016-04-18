@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.28)  18 APR 2016 00:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2016.1.28)  18 APR 2016 10:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -234,65 +234,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--143
 File: img/scatter_plots.png Graphic file (type png)
  <use img/scatter_plots.png>
 Package pdftex.def Info: img/scatter_plots.png used on input line 148.
-(pdftex.def)             Requested size: 256.0748pt x 193.86188pt.
+(pdftex.def)             Requested size: 227.62204pt x 172.32002pt.
  <img/regression.png, id=31, 1282.7925pt x 967.615pt>
 File: img/regression.png Graphic file (type png)
  <use img/regression.png>
 Package pdftex.def Info: img/regression.png used on input line 149.
-(pdftex.def)             Requested size: 256.0748pt x 193.15045pt.
+(pdftex.def)             Requested size: 227.62204pt x 171.68272pt.
 
-Overfull \hbox (124.76068pt too wide) in paragraph at lines 148--152
+Overfull \hbox (67.85516pt too wide) in paragraph at lines 148--152
 [] []
  []
 
 [6] [7 <./img/scatter_plots.png> <./img/regression.png>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 173.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 172.
  (/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 173.
- [8] [9] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 259--261
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 172.
+ [8] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 258--260
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 269--270
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
 <img/clustered.png, id=49, 1288.815pt x 967.615pt>
 File: img/clustered.png Graphic file (type png)
  <use img/clustered.png>
-Package pdftex.def Info: img/clustered.png used on input line 277.
+Package pdftex.def Info: img/clustered.png used on input line 274.
 (pdftex.def)             Requested size: 256.0748pt x 192.24982pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 277--278
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
 
  []
 
 [11] [12 <./img/clustered.png>] [13] [14]
-Overfull \hbox (23.26517pt too wide) in paragraph at lines 367--368
+Overfull \hbox (23.26517pt too wide) in paragraph at lines 365--366
 []\OT1/cmr/m/n/12 http://www2.isye.gatech.edu/~sman/courses/6739SimpleLinearRegression.pdf 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
 []\OT1/cmr/m/n/12 https://datasciencelab.wordpress.com/2013/12/12/clustering-with-k-
  []
 
 [15] (/Users/camerondart/spring-2016/math-348/project/proposal/.texpadtmp/proposal.aux) ) 
 Here is how much of TeX's memory you used:
- 3676 strings out of 493054
- 51446 string characters out of 6134760
+ 3675 strings out of 493054
+ 51437 string characters out of 6134760
  241547 words of memory out of 5000000
- 7151 multiletter control sequences out of 15000+600000
+ 7150 multiletter control sequences out of 15000+600000
  13704 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,9n,40p,1001b,1571s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,9n,40p,1010b,1571s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on /Users/camerondart/spring-2016/math-348/project/proposal/.texpadtmp/proposal.pdf (15 pages, 448171 bytes).
+Output written on /Users/camerondart/spring-2016/math-348/project/proposal/.texpadtmp/proposal.pdf (15 pages, 448370 bytes).
 PDF statistics:
  116 PDF objects out of 1000 (max. 8388607)
  80 compressed objects within 1 object stream

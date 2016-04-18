@@ -22,22 +22,22 @@
 
 % Abstract
 \begin{abstract}
-In order to gain a deeper understanding of \textit{artificial intelligence} algorithms I will explore a \textit{supervised} learning algorithm, \textit{linear regression}, and an \textit{unsupervised} learning algorithm, \textit{K-means clustering}. After researching these algorithms mathematical descriptions, I will write implementations of each algorithm in Python and visualize their outcomes.
+In order to gain a deeper understanding of \textit{artificial intelligence} algorithms, I will explore a \textit{supervised} learning algorithm, \textit{linear regression}, and an \textit{unsupervised} learning algorithm, \textit{K-means clustering}. After researching these algorithms' mathematical descriptions, I will write implementations both in Python and visualize their outcomes.
 \end{abstract}
 % Intro
 \section{Introduction}
-In this paper, I will strictly define a subset of artificial intelligence called \textit{machine learning}. Before diving into the mathematical and definitions of these algorithms, I will distinguish \textit{supervised} from \textit{unsupervised}. The \textit{supervised} learning algorithm I will explore is known as a \textit{linear regression} and the \textit{unsupervised} learning algorithm is \textit{K-means clustering}.\\ \\
- Additionally, \textit{supervised learning algorithms} are computationally intensive, so before writing any code it would be most useful to compute the algorithm by hand with a \textit{training set}. Doing this will allow me to understand where inefficiencies in code and computation can occur, or what mathematical concepts and definitions I can apply to my code. Once I have my mathematical descriptions written, I will proceed to writing my own code. The popular scientific computing Python library called \textit{NumPy} \cite{NumPy} will be used to to handle most of the heavy computational aspects of these algorithms; and the Python graphing library called \textit{matplotlib} \cite{matplotlib} is used for the visualization of my calculations. 
+In this paper, I will strictly define a subset of artificial intelligence called \textit{machine learning}. Before diving into the mathematical descriptions and definitions of these algorithms, I will distinguish \textit{supervised learning} from \textit{unsupervised learning}. The \textit{supervised} learning algorithm I will explore is known as a \textit{linear regression} and the \textit{unsupervised} learning algorithm is \textit{K-means clustering}.\\ \\
+ Additionally, \textit{supervised learning algorithms} are computationally intensive, so before writing any code it would be most useful to compute the algorithm by hand with a \textit{training set}. Doing this will allow me to understand where inefficiencies in code and computation can occur, or what mathematical concepts and definitions I can apply to my code. Once I have my mathematical descriptions written, I will proceed to write my own code. The popular scientific computing Python library called \textit{NumPy} \cite{NumPy} will be used to handle most of the heavy computational aspects of these algorithms. The Python graphing library called \textit{matplotlib} \cite{matplotlib} is used for the visualization of my data and calculations. 
 % Machine Learning
 \section{Machine Learning}
-Machine learning is one of the many subsets of \textit{artificial intelligence}, or the study of how to make computers capable of intelligent behavior. Specifically, it deals with the creation of data driven algorithms. These are algorithms produce patterns based on given input and use the patterns to predict future cases. The main differentiation of machine learning from another subset of artificial intelligence is that the data drives discovery. For example, say an individual is writing an algorithm that detects what a face looks like. A machine learning algorithm would learn by example, juxtaposed to another type of algorithm that would strictly define what a face looks like inside the code. Inside of machine learning there primarily two different types of algorithms, supervised and unsupervised learning.
+Machine learning is one of the many subsets of \textit{artificial intelligence}, known as the study of how to make computers capable of intelligent behavior. Specifically, it deals with the creation of data driven algorithms. These algorithms produce patterns based on given input and use the patterns to predict future cases. The main differentiation of machine learning from another subset of artificial intelligence is that the data drives discovery. For example, say an individual is writing an algorithm that detects what a face looks like. A machine learning algorithm would learn by example, juxtaposed to another type of algorithm that would strictly define what a face looks like in the code the code. Inside of machine learning, there primarily two different types of algorithms: \textit{supervised} and \textit{unsupervised} learning.
 % Supervised Learning
 \section{Supervised Learning Algorithms}
 \subsection{Definition}
-In \textit{supervised learning} there are two groups of algorithms: classification and regression that both complete the task of deducing a continuous function from a given \textit{training set}. \cite{Ng} A \textit{training set} is a vector of discrete values used for the initial discovery of relationships between variables. In order to prevent \textit{overfitting}, deducing conclusions when none exist, a \textit{validation set} is used in case any classification parameter needs to be adjusted. Further on, a \textit{test set} is used to gauge the efficiency of a given model. \cite{Ng} One classic example of a \textit{supervised learning} algorithm is a \textit{linear regression}. Going back to our example an algorithm that classifying a face, a supervised learning algorithm would learn through examples what a face looks like in terms of its properties, such as color, structure, and size so it can classify later inputs based on what it previously observed.
+In \textit{supervised learning} there are two groups of algorithms: classification and regression. Both complete the task of deducing a continuous function from a given \textit{training set}. \cite{Ng} A \textit{training set} is a vector of discrete values used for the initial discovery of relationships between variables. In order to prevent \textit{overfitting}, deducing conclusions when none exist, a \textit{validation set} is used in case any classification parameter needs to be adjusted. Furthermore, a \textit{test set} is used to gauge the efficiency of a given model. \cite{Ng} One classic example of a \textit{supervised learning} algorithm is a \textit{linear regression}. Going back to our example of an algorithm classifying a face, a supervised learning algorithm would teach itself through examples what a face looks like in terms of its properties, such as color, structure, and size, so it can classify future inputs based upon these discoveries already made.
 \subsection{Example: Linear Regression}
 \subsubsection{Definition}
-A \textit{linear regression} is an approach for modeling the relationship between a scalar dependent variable $y$ and one or more explanatory variables (or independent variables) denoted $X$. Specifically the case of one explanatory variable is called a \textit{linear regression}. A sample data set for a linear regression would be pairs $(x_1,y_1),(x_2,y_2),....,(x_n,y_n)$ where the regression models $y_i$ as a function of $x_i$
+A \textit{linear regression} is an approach for modeling the relationship between a scalar dependent variable $y$ and one or more explanatory variables or independent variables) denoted $X$. Specifically, the case of one explanatory variable is called a \textit{linear regression}. A sample data set for a linear regression would be pairs $(x_1,y_1),(x_2,y_2),....,(x_n,y_n)$ where the regression models $y_i$ as a function of $x_i$
 \subsubsection{Mathematical Description}
 The \textit{regression line} can be determined by finding \textit{sum of squares} method. A
 \textit{fitted linear regression line} can be described as
@@ -120,11 +120,11 @@ First, I will calculate $\bar x$ and $\bar y$, better known as the average value
 Thus, based on our training set defined above $\bar x = 8.72$ and $\bar y = 578.89$\\
 Next, I will use the previous calculations of $\bar x$ and $\bar y$ to calculate $S_{xy}$ and $S_{xx}$
 \begin{align*}
-S_{xx} &= \sum_{i=1}^{i=20} (x_i)^2 - \bar x \\
-&= \sum_{i=1}^{i=20} (x_i)^2 - \sum{i=1}^{i=20} \bar x \\
+S_{xx} &= \sum_{i=1}^{20} (x_i)^2 - \bar x \\
+&= \sum_{i=1}^{i=20} (x_i)^2 - \sum_{i=1}^{i=20} \bar x \\
 &= 285.31 \\
-S_{xy} &= \sum_{i=1}^{i=20} (x_i)(y_i) - \bar x \bar y \\
-&= \sum_{i=1}^{i=20} (x_i)(y_i) - \sum_{i=1}^{i=20} \bar x \bar y \\
+S_{xy} &= \sum_{i=1}^{20} (x_i)(y_i) - \bar x \bar y \\
+&= \sum_{i=1}^{20} (x_i)(y_i) - \sum_{i=1}^{20} \bar x \bar y \\
 &= 8598.02
 \end{align*}
 Now, we have all calculations we need to find where $\beta_{1}$
@@ -133,7 +133,7 @@ Now, we have all calculations we need to find where $\beta_{1}$
 	&= \frac{8598.02}{285.31} \\
 	&= 30.14
 \end{align*}
-Now since we have $\beta_{0}$ we can use it in our final calculation of $\beta_{0}$
+Since we have $\beta_{0}$ we can use it in our final calculation of $\beta_{1}$
 \begin{align*}
 	\beta_{0} &= \bar y - \beta_{1} * \bar x \\
 	&= 578.89 - 8.24 * 9.45 \\
@@ -145,14 +145,13 @@ Our linear regression line is now \\
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Geometric Representation}
-\includegraphics[width=90mm]{img/scatter_plots}
-\includegraphics[width=90mm]{img/regression}
+\includegraphics[width=80mm]{img/scatter_plots}
+\includegraphics[width=80mm]{img/regression}
 As you can see from the two graphs, our linear regression is a strong approximation of our data set. 
 %%%%%%%%%%%%%%%%%%%%%%
 \subsubsection{Sample Sum of Squares Regression in Python}
 \begin{lstlisting}
 #!/usr/bin/python
-import time # get start and end time of function
 import numpy as np # scientific computing library
 import matplotlib.pyplot as plt # library to generate plots
 
@@ -180,7 +179,7 @@ class SumSquareRegression:
 		sum_y = 0
 		size = len(vector) 
 
-		for i in range(0, len(vector) ):
+		for i in range(0, size ):
 			sum_x += vector[i][0]
 			sum_y += vector[i][1]
 
@@ -251,7 +250,7 @@ if __name__ == '__main__':
 \end{lstlisting}
 \section{Unsupervised Learning Algorithms}
 \subsection{Definition}
-Our expected outcome from unsupervised learning is to derive some structure in the data where none previously existed. That being said, we are "clustering" the data into groups based upon intrinsic relationships found. Hence, this type of algorithm allows user to approach the problem at hand with little to no knowledge of what the result should look like. Back to our example of face classification, an unsupervised algorithm would differentiate faces from cows and dogs, but it would not know, or define, what each group is.  
+Our expected outcome from unsupervised learning is to derive some structure from the data where none previously existed. That being said, we are "clustering" the data into groups based on intrinsic relationships found. Hence, this type of algorithm allows user to approach the problem at hand with little to no knowledge of what the result should look like. Back to our example of face classification, an unsupervised algorithm would differentiate faces from cows and dogs, but it would not know or define what each group is.  
 \subsection{Example K-means clustering}
 \subsubsection{Defintion}
 Grouping a set of objects into similar subsets is a very common task in data analysis and is often referred to as "clustering". This task can be done in a copious amount of ways, however, one of the most prominent algorithms is \textit{K-means clustering}. The  \textit{K-means clustering} algorithm aims to partition $n \in \mathbb{N}$ points in a $d$ dimensional space into $k > 0$ distinct clusters. Thus, given a vector of data $X \in \mathbb{R}^d$ with $d$ and $n$ given above, our algorithm seeks to find a set $C$ of $k$ centers. \cite{MacKay} 
@@ -261,7 +260,7 @@ Let $C$ be the set of clusters such that $C_k \subset C$, the set of clusters, $
 \begin{equation}
 	C_k = \{ x_n : \vert \vert x_n - \mu_k \vert \vert \leq \,\,\, all \,\,\, \vert \vert x_n - \mu_l \vert \vert \}
 \end{equation}
-$\mu_k$ is defined to be the average values clusters or 
+$\mu_k$ is defined to be the average values clusters 
 \begin{equation}
 \mu_k = \frac{1}{C_k} \sum_{x_n \in C_k} x_n	
 \end{equation}
@@ -270,11 +269,10 @@ The mathematical condition for the K clusters $C_k$ and the K centroids $\mu_k$ 
 \begin{equation}
 	\text{Minimize} \sum_{k=1}^{K}\,\sum_{x_n \in C_k} (\vert \vert x_n - \mu_k \vert \vert )^2 \text{with respect to}\,\, C_k, \mu_k
 \end{equation} \cite{dsl}
-The result is a partitioning of a data space into Voronoi cells. This is why \textit{Lloyd's Algorithm} is also called \textit{Voronoi iteration}.
-\subsubsection{Example Use Case}
-\subsubsection{Sample K-means clustering in Python}
+The result is a partitioning of data into Voronoi cells. This is why \textit{Lloyd's Algorithm} is also called \textit{Voronoi iteration}.
 \subsubsection{Geometric Representation}
 \includegraphics[width=90mm]{img/clustered}\\
+\subsubsection{Sample K-means clustering in Python}
 \begin{lstlisting}
 #!/usr/bin/python
 import numpy as np # scientific computing library
